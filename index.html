@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>estores fernandes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="#home" class="logo">fernandes<span>Store</span></a>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#colecao">Coleção</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <span class="tag">Moda premium • Estilo casual • Qualidade</span>
+        <h1>Roupas Lacoste para quem valoriza elegância</h1>
+        <p>
+          Descubra polos, camisetas, jaquetas e acessórios com visual moderno, conforto e sofisticação.
+        </p>
+        <div class="hero-actions">
+          <a href="#produtos" class="btn btn-primary">Ver produtos</a>
+          <a href="#contato" class="btn btn-outline">Fazer pedido</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80" alt="Moda premium">
+      </div>
+    </section>
+
+    <section class="section" id="colecao">
+      <div class="section-title">
+        <h2>Coleções em destaque</h2>
+        <p>Encontre peças para diferentes estilos e ocasiões.</p>
+      </div>
+
+      <div class="collection-grid">
+        <div class="collection-card">
+          <h3>Polos clássicas</h3>
+          <p>Peças icônicas, versáteis e ideais para um visual sofisticado.</p>
+        </div>
+        <div class="collection-card">
+          <h3>Camisetas casuais</h3>
+          <p>Conforto e estilo para o dia a dia com design minimalista.</p>
+        </div>
+        <div class="collection-card">
+          <h3>Jaquetas e moletons</h3>
+          <p>Camadas modernas para dias frios ou looks urbanos.</p>
+        </div>
+        <div class="collection-card">
+          <h3>Acessórios</h3>
+          <p>Bonés, bolsas e outros itens para completar o visual.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="produtos">
+      <div class="section-title">
+        <h2>Produtos disponíveis</h2>
+        <p>Selecione sua categoria favorita e adicione ao carrinho.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">Todos</button>
+        <button class="filter" data-filter="polos">Polos</button>
+        <button class="filter" data-filter="camisetas">Camisetas</button>
+        <button class="filter" data-filter="jaquetas">Jaquetas</button>
+        <button class="filter" data-filter="acessorios">Acessórios</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="section-title">
+        <h2>Sobre a loja</h2>
+        <p>Uma experiência inspirada em moda premium e vitrine digital elegante.</p>
+      </div>
+
+      <div class="about-box">
+        <p>
+          Esta loja foi criada como uma vitrine de vendas para roupas no estilo Lacoste, com foco em organização, usabilidade e apresentação visual.
+        </p>
+        <p>
+          O layout destaca catálogo, filtros por categoria, carrinho simples e formulário de contato para pedidos.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="section-title">
+        <h2>Contato e pedidos</h2>
+        <p>Envie sua solicitação para comprar ou tirar dúvidas.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Seu nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="Seu e-mail" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem ou pedido" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <aside class="cart">
+    <h3>Carrinho</h3>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      <strong>Total:</strong>
+      <span id="cartTotal">R$ 0,00</span>
+    </div>
+    <button class="btn btn-outline cart-clear" id="clearCart">Limpar carrinho</button>
+  </aside>
+
+  <footer class="footer">
+    <p>© 2026 Lacoste Store. Projeto demonstrativo de vendas.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
